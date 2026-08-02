@@ -7,15 +7,15 @@ import pymysql
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
-
+import xgboost as xgb
 # ---------------------------------------------------------
 # 1. Database Connection & Fetching Data
 # ---------------------------------------------------------
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "your_mysql_password",
-    "database": "your_database_name",
+    "password": "root",
+    "database": "cypbl",
 }
 
 
