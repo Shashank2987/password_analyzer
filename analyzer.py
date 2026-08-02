@@ -1,5 +1,5 @@
 import math
-import pickle
+import joblib
 import numpy as np
 
 # Feature Names evaluated by the ML Model
@@ -87,7 +87,7 @@ def main():
     # Load trained ML model from disk
     try:
         with open("model.pkl", "rb") as f:
-            ml_model = pickle.load(f)
+            ml_model = joblib.load("model.pkl")
         print("✅ Trained ML model ('model.pkl') loaded successfully.")
     except FileNotFoundError:
         print(
