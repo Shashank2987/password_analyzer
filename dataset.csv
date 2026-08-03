@@ -1,0 +1,746 @@
+password	vuln
+123456	Common Credential / Dictionary Word
+123456789	Common Credential / Sequential Pattern
+qwerty	Common Credential / Keyboard Pattern
+password	Common Credential / Case Variation
+111111	Common Credential / Repeated Pattern
+12345678	Common Credential / Sequential Pattern
+abc123	Common Credential / Simple Alphanumeric
+1234567	Common Credential / Sequential Pattern
+password1	Common Credential / Case / Variation
+12345	Common Credential / Short Sequential
+1234567890	Common Credential / Sequential Pattern
+123123	Common Credential / Repeated Pattern
+000000	Common Credential / Repeated Pattern
+iloveyou	Common Credential / Common Phrase
+1234	Common Credential / Short Sequential
+1q2w3e4r5t	Common Credential / Keyboard Pattern
+qwertyuiop	Common Credential / Keyboard Pattern
+123	Common Credential / Short Sequential
+monkey	Common Credential / Dictionary Word
+dragon	Common Credential / Dictionary Word
+123456a	Common Credential / Simple Variation
+654321	Common Credential / Reverse Sequential
+123321	Common Credential / Palindrome Pattern
+666666	Common Credential / Repeated Pattern
+1qaz2wsx	Common Credential / Keyboard Pattern
+myspace1	Common Credential / Legacy Brand Password
+121212	Common Credential / Repeated Pattern
+homelesspa	Common Credential / Dictionary Word
+123qwe	Common Credential / Simple Alphanumeric
+a123456	Common Credential / Simple Variation
+123abc	Common Credential / Simple Alphanumeric
+1q2w3e4r	Common Credential / Keyboard Pattern
+qwe123	Common Credential / Simple Alphanumeric
+7777777	Common Credential / Repeated Pattern
+qwerty123	Common Credential / Keyboard Pattern
+target123	Common Credential / Simple Variation
+tinkle	Common Credential / Dictionary Word
+987654321	Common Credential / Reverse Sequential
+qwerty1	Common Credential / Keyboard Pattern
+222222	Common Credential / Repeated Pattern
+zxcvbnm	Common Credential / Keyboard Pattern
+1g2w3e4r	Common Credential / Keyboard Pattern
+gwerty	Common Credential / Keyboard Pattern Variant
+zag12wsx	Common Credential / Keyboard Pattern
+gwerty123	Common Credential / Keyboard Pattern Variant
+555555	Common Credential / Repeated Pattern
+fuckyou	Common Credential / Profanity Phrase
+112233	Common Credential / Repeated Pattern
+asdfghjkl	Common Credential / Keyboard Pattern
+1q2w3e	Common Credential / Keyboard Pattern
+123123123	Common Credential / Repeated Pattern
+qazwsx	Common Credential / Keyboard Pattern
+computer	Common Credential / Dictionary Word
+princess	Common Credential / Dictionary Word
+12345a	Common Credential / Simple Variation
+ashley	Common Credential / Common First Name
+159753	Common Credential / Keypad Pattern
+michael	Common Credential / Common First Name
+football	Common Credential / Common Word
+sunshine	Common Credential / Dictionary Word
+1234qwer	Common Credential / Keyboard Pattern
+iloveyou1	Common Credential / Simple Variation
+aaaaaa	Common Credential / Repeated Characters
+fuckyou1	Common Credential / Simple Variation
+789456123	Common Credential / Keypad Pattern
+daniel	Common Credential / Common First Name
+777777	Common Credential / Repeated Pattern
+princess1	Common Credential / Simple Variation
+123654	Common Credential / Keypad Pattern
+11111	Common Credential / Short Repeated Pattern
+asdfgh	Common Credential / Keyboard Pattern
+999999	Common Credential / Repeated Pattern
+11111111	Common Credential / Repeated Pattern
+passer2009	Common Credential / Year Pattern
+888888	Common Credential / Repeated Pattern
+love	Common Credential / Short Word
+abcd1234	Common Credential / Simple Pattern
+shadow	Common Credential / Dictionary Word
+football1	Common Credential / Simple Variation
+love123	Common Credential / Simple Variation
+superman	Common Credential / Pop Culture Word
+jordan23	Common Credential / Pop Culture Pattern
+jessica	Common Credential / Common First Name
+monkey1	Common Credential / Simple Variation
+12qwaszx	Common Credential / Keyboard Pattern
+a12345	Common Credential / Simple Variation
+baseball	Common Credential / Common Word
+123456789a	Common Credential / Simple Variation
+killer	Common Credential / Dictionary Word
+asdf	Common Credential / Short Keyboard Pattern
+samsung	Common Credential / Brand Name
+master	Common Credential / Dictionary Word
+azerty	Common Credential / AZERTY Layout Pattern
+charlie	Common Credential / Common First Name
+asd123	Common Credential / Simple Alphanumeric
+soccer	Common Credential / Common Word
+FQRG7CS493	Potentially Leaked String / Key Pattern
+88888888	Common Credential / Repeated Pattern
+jordan	Common Credential / Common First Name
+michael1	Common Credential / Simple Variation
+zaq1zaq1	Keyboard Walks
+zaq1xsw2	Keyboard Walks
+zaq1cde3	Keyboard Walks
+zaq1vfr4	Keyboard Walks
+zaq1bgt5	Keyboard Walks
+zaq1nhy6	Keyboard Walks
+zaq1mju7	Keyboard Walks
+zaq1,ki8	Keyboard Walks
+zaq1.lo9	Keyboard Walks
+zaq1/;p0	Keyboard Walks
+zaq1ZQ!	Keyboard Walks
+zaq1XW@	Keyboard Walks
+zaq1DE#	Keyboard Walks
+zaq1FR$	Keyboard Walks
+zaq1BGT%	Keyboard Walks
+zaq1NHY^	Keyboard Walks
+zaq1JU&	Keyboard Walks
+zaq1<KI*	Keyboard Walks
+zaq1LO(	Keyboard Walks
+zaq1?:P)	Keyboard Walks
+zaq1qwer	Keyboard Walks
+zaq11234	Keyboard Walks
+zaq1asdf	Keyboard Walks
+zaq1zxcv	Keyboard Walks
+zaq1!@#$	Keyboard Walks
+zaq12345	Keyboard Walks
+zaq13456	Keyboard Walks
+zaq14576	Keyboard Walks
+zaq15678	Keyboard Walks
+zaq16789	Keyboard Walks
+zaq17890	Keyboard Walks
+zaq1890-	Keyboard Walks
+zaq190=-	Keyboard Walks
+zaq10-=\\	Keyboard Walks
+zaq1@#$%	Keyboard Walks
+zaq1#$%^	Keyboard Walks
+zaq1$%&^	Keyboard Walks
+zaq1%^&*	Keyboard Walks
+zaq1^*(	Keyboard Walks
+zaq1&*()	Keyboard Walks
+zaq1*()_	Keyboard Walks
+zaq1()+_	Keyboard Walks
+zaq1)+|	Keyboard Walks
+zaq1wert	Keyboard Walks
+zaq1erty	Keyboard Walks
+zaq1rtyu	Keyboard Walks
+zaq1tyui	Keyboard Walks
+zaq1yuio	Keyboard Walks
+zaq1uiop	Keyboard Walks
+zaq1iop[	Keyboard Walks
+zaq1op][	Keyboard Walks
+zaq1sdfg	Keyboard Walks
+zaq1dgh	Keyboard Walks
+zaq1fghj	Keyboard Walks
+zaq1ghjk	Keyboard Walks
+zaq1hjkl	Keyboard Walks
+zaq1jkl;	Keyboard Walks
+zaq1kl;'	Keyboard Walks
+zaq1xcvb	Keyboard Walks
+zaq1cvbn	Keyboard Walks
+zaq1vnm	Keyboard Walks
+zaq1bnm,	Keyboard Walks
+zaq1nm,.	Keyboard Walks
+zaq1m,./	Keyboard Walks
+zaq1p0o9	Keyboard Walks
+zaq1P)O(	Keyboard Walks
+zaq1o9i8	Keyboard Walks
+zaq1O(I*	Keyboard Walks
+zaq1i8u7	Keyboard Walks
+zaq1I*U&	Keyboard Walks
+zaq1u7y6	Keyboard Walks
+zaq1U&Y^	Keyboard Walks
+zaq1y6t5	Keyboard Walks
+zaq1Y^T%	Keyboard Walks
+zaq1r4e3	Keyboard Walks
+zaq1R$E#	Keyboard Walks
+zaq1t5r4	Keyboard Walks
+zaq1T%R$	Keyboard Walks
+zaq1e3w2	Keyboard Walks
+zaq1E#W@	Keyboard Walks
+zaq1w2q1	Keyboard Walks
+zaq1W@Q!	Keyboard Walks
+zaq10p9o	Keyboard Walks
+zaq1)P(O	Keyboard Walks
+zaq19o8i	Keyboard Walks
+zaq1(O*I	Keyboard Walks
+zaq18i7u	Keyboard Walks
+zaq1*I&U	Keyboard Walks
+zaq16y5t	Keyboard Walks
+zaq1^Y%T	Keyboard Walks
+zaq15t4r	Keyboard Walks
+zaq1%T$R	Keyboard Walks
+zaq14r3e	Keyboard Walks
+zaq1$R#E	Keyboard Walks
+zaq13e2w	Keyboard Walks
+zaq1#E@W	Keyboard Walks
+zaq12w1q	Keyboard Walks
+zaq1@W!Q	Keyboard Walks
+xsw2zaq1	Keyboard Walks
+xsw2xsw2	Keyboard Walks
+xsw2cde3	Keyboard Walks
+xsw2vfr4	Keyboard Walks
+xsw2bgt5	Keyboard Walks
+xsw2nhy6	Keyboard Walks
+xsw2mju7	Keyboard Walks
+xsw2,ki8	Keyboard Walks
+xsw2.lo9	Keyboard Walks
+xsw2/;p0	Keyboard Walks
+xsw2ZQ!	Keyboard Walks
+xsw2XW@	Keyboard Walks
+xsw2DE#	Keyboard Walks
+xsw2FR$	Keyboard Walks
+xsw2BGT%	Keyboard Walks
+xsw2NHY^	Keyboard Walks
+xsw2JU&	Keyboard Walks
+xsw2<KI*	Keyboard Walks
+xsw2LO(	Keyboard Walks
+xsw2?:P)	Keyboard Walks
+xsw2qwer	Keyboard Walks
+xsw21234	Keyboard Walks
+xsw2asdf	Keyboard Walks
+xsw2zxcv	Keyboard Walks
+xsw2!@#$	Keyboard Walks
+xsw22345	Keyboard Walks
+xsw23456	Keyboard Walks
+xsw24576	Keyboard Walks
+xsw25678	Keyboard Walks
+xsw26789	Keyboard Walks
+xsw27890	Keyboard Walks
+xsw2890-	Keyboard Walks
+xsw290=-	Keyboard Walks
+xsw20-=\\	Keyboard Walks
+xsw2@#$%	Keyboard Walks
+xsw2#$%^	Keyboard Walks
+xsw2$%&^	Keyboard Walks
+xsw2%^&*	Keyboard Walks
+xsw2^*(	Keyboard Walks
+xsw2&*()	Keyboard Walks
+xsw2*()_	Keyboard Walks
+xsw2()+_	Keyboard Walks
+xsw2)+|	Keyboard Walks
+xsw2wert	Keyboard Walks
+xsw2erty	Keyboard Walks
+xsw2rtyu	Keyboard Walks
+xsw2tyui	Keyboard Walks
+xsw2yuio	Keyboard Walks
+xsw2uiop	Keyboard Walks
+xsw2iop[	Keyboard Walks
+p4ssword	Common Credential / Leetspeak Variation
+pazsword	Common Credential / Leetspeak Variation
+pa5sword	Common Credential / Leetspeak Variation
+p4zsword	Common Credential / Leetspeak Variation
+p45sword	Common Credential / Leetspeak Variation
+paszword	Common Credential / Leetspeak Variation
+pas5word	Common Credential / Leetspeak Variation
+p4szword	Common Credential / Leetspeak Variation
+p4s5word	Common Credential / Leetspeak Variation
+pazzword	Common Credential / Leetspeak Variation
+paz5word	Common Credential / Leetspeak Variation
+pa5zword	Common Credential / Leetspeak Variation
+pa55word	Common Credential / Leetspeak Variation
+p4zzword	Common Credential / Leetspeak Variation
+p4z5word	Common Credential / Leetspeak Variation
+p45zword	Common Credential / Leetspeak Variation
+p455word	Common Credential / Leetspeak Variation
+passw0rd	Common Credential / Leetspeak Variation
+p4ssw0rd	Common Credential / Leetspeak Variation
+pazsw0rd	Common Credential / Leetspeak Variation
+pa5sw0rd	Common Credential / Leetspeak Variation
+p4zsw0rd	Common Credential / Leetspeak Variation
+p45sw0rd	Common Credential / Leetspeak Variation
+paszw0rd	Common Credential / Leetspeak Variation
+pas5w0rd	Common Credential / Leetspeak Variation
+p4szw0rd	Common Credential / Leetspeak Variation
+p4s5w0rd	Common Credential / Leetspeak Variation
+pazzw0rd	Common Credential / Leetspeak Variation
+paz5w0rd	Common Credential / Leetspeak Variation
+pa5zw0rd	Common Credential / Leetspeak Variation
+pa55w0rd	Common Credential / Leetspeak Variation
+p4zzw0rd	Common Credential / Leetspeak Variation
+p4z5w0rd	Common Credential / Leetspeak Variation
+p45zw0rd	Common Credential / Leetspeak Variation
+p455w0rd	Common Credential / Leetspeak Variation
+"spring	Common Credential / Wordlist Entry
+'buster+'	Common Credential / Wordlist Entry
+++++	Common Credential / Repeated Symbols
++monday	Common Credential / Simple Pattern
++rose	Common Credential / Simple Pattern
++rosemg	Common Credential / Wordlist Entry
+----	Common Credential / Repeated Symbols
+-abril	Common Credential / Wordlist Entry
+-ali	Common Credential / Wordlist Entry
+-amcld	Common Credential / Wordlist Entry
+-asce	Common Credential / Wordlist Entry
+-assd	Common Credential / Wordlist Entry
+-aug	Common Credential / Wordlist Entry
+-beloi	Common Credential / Wordlist Entry
+-beloit	Common Credential / Wordlist Entry
+-boston	Common Credential / Wordlist Entry
+-charl	Common Credential / Wordlist Entry
+-dan	Common Credential / Wordlist Entry
+-desig	Common Credential / Wordlist Entry
+-emh	Common Credential / Wordlist Entry
+-ever	Common Credential / Wordlist Entry
+-ignet	Common Credential / Wordlist Entry
+-jacs	Common Credential / Wordlist Entry
+-love	Common Credential / Wordlist Entry
+-mar	Common Credential / Wordlist Entry
+-march	Common Credential / Wordlist Entry
+-nov	Common Credential / Wordlist Entry
+-oct	Common Credential / Wordlist Entry
+-param	Common Credential / Wordlist Entry
+-patriot	Common Credential / Wordlist Entry
+-pens	Common Credential / Wordlist Entry
+-piv-	Common Credential / Wordlist Entry
+-year	Common Credential / Wordlist Entry
+=bart	Common Credential / Wordlist Entry
+=damian	Common Credential / Wordlist Entry
+=dublin	Common Credential / Wordlist Entry
+=nov	Common Credential / Wordlist Entry
+=oct	Common Credential / Wordlist Entry
+[amjav]	Common Credential / Wordlist Entry
+\\ifs	Common Credential / Short Pattern
+\\ifssr	Common Credential / Wordlist Entry
+____	Common Credential / Repeated Symbols
+_abril	Common Credential / Wordlist Entry
+_agosto	Common Credential / Wordlist Entry
+_amor	Common Credential / Wordlist Entry
+_brook	Common Credential / Wordlist Entry
+_brooke	Common Credential / Wordlist Entry
+_bryan	Common Credential / Wordlist Entry
+_julio	Common Credential / Wordlist Entry
+_junio	Common Credential / Wordlist Entry
+_mar	Common Credential / Wordlist Entry
+_nov	Common Credential / Wordlist Entry
+_pass	Common Credential / Wordlist Entry
+_password	Common Credential / Wordlist Entry
+_patrick	Common Credential / Wordlist Entry
+_tf_cq	Common Credential / Wordlist Entry
+_tf_cqk	Common Credential / Wordlist Entry
+_wkm	Common Credential / Wordlist Entry
+a-emh	Common Credential / Wordlist Entry
+a-emh\\	Common Credential / Wordlist Entry
+aaaa	Common Credential / Repeated Characters
+aaaaaaaa	Common Credential / Repeated Pattern
+aaab	Common Credential / Simple Pattern
+aaabbb	Common Credential / Simple Pattern
+aaac	Common Credential / Simple Pattern
+aaad	Common Credential / Simple Pattern
+aaae	Common Credential / Simple Pattern
+aaaf	Common Credential / Simple Pattern
+aaak	Common Credential / Simple Pattern
+aaam	Common Credential / Simple Pattern
+aaasss	Common Credential / Simple Pattern
+aabb	Common Credential / Simple Pattern
+aabbcc	Common Credential / Keyboard / Sequential Pattern
+aabbccdd	Common Credential / Keyboard / Sequential Pattern
+aabc	Common Credential / Simple Pattern
+aacb	Common Credential / Simple Pattern
+aacc	Common Credential / Simple Pattern
+aacg	Common Credential / Simple Pattern
+aachen	Common Credential / Dictionary Word
+aacn	Common Credential / Simple Pattern
+aacp	Common Credential / Simple Pattern
+aada	Common Credential / Simple Pattern
+aadd	Common Credential / Simple Pattern
+aaec	Common Credential / Simple Pattern
+aaee	Common Credential / Simple Pattern
+aafd	Common Credential / Simple Pattern
+aagg	Common Credential / Simple Pattern
+aagje	Common Credential / Dictionary Word
+aahview	Common Credential / Wordlist Entry
+aaindia	Common Credential / Simple Variation
+aaja	Common Credential / Simple Pattern
+aajj	Common Credential / Simple Pattern
+aajm	Common Credential / Simple Pattern
+aakash	Common Credential / First Name
+aakw	Common Credential / Simple Pattern
+aalex	Common Credential / First Name Variation
+aali	Common Credential / First Name Variation
+aaliya	Common Credential / First Name Variation
+aaliyah	Common Credential / Common First Name
+aall	Common Credential / Simple Pattern
+aallen	Common Credential / Name Variation
+aalvare	Common Credential / Name Variation
+aalyah	Common Credential / Name Variation
+aama	Common Credential / Simple Pattern
+aamber	Common Credential / First Name Variation
+aamer	Common Credential / First Name Variation
+aamh	Common Credential / Simple Pattern
+aamir	Common Credential / Common First Name
+aamm	Common Credential / Simple Pattern
+aamsm	Common Credential / Simple Pattern
+aana	Common Credential / Simple Pattern
+aang	Common Credential / Pop Culture Name
+aangel	Common Credential / Word Variation
+aaniyah	Common Credential / First Name Variation
+aann	Common Credential / Simple Pattern
+aapje	Common Credential / Dictionary Word
+aapjes	Common Credential / Dictionary Word
+aapp	Common Credential / Simple Pattern
+aapril	Common Credential / Word Variation
+aardbei	Common Credential / Dictionary Word
+aardvark	Common Credential / Dictionary Word
+aariana	Common Credential / First Name Variation
+aarika	Common Credential / First Name Variation
+aarin	Common Credential / First Name Variation
+aarion	Common Credential / First Name Variation
+aaro	Common Credential / First Name Variation
+aaron	Common Credential / Common First Name
+aaronb	Common Credential / Name Variation
+internet	Common Credential / Dictionary Word
+whatever	Common Credential / Dictionary Word
+starwars	Common Credential / Pop Culture Word
+trustno1	Common Credential / Common Phrase
+jennifer	Common Credential / Common First Name
+michelle	Common Credential / Common First Name
+mercedes	Common Credential / Brand Name
+benjamin	Common Credential / Common First Name
+samantha	Common Credential / Common First Name
+victoria	Common Credential / Common First Name
+alexander	Common Credential / Common First Name
+asdf1234	Common Credential / Simple Alphanumeric
+q1w2e3r4	Common Credential / Keyboard Pattern
+elephant	Common Credential / Dictionary Word
+garfield	Common Credential / Pop Culture Word
+chocolate	Common Credential / Dictionary Word
+jonathan	Common Credential / Common First Name
+caroline	Common Credential / Common First Name
+maverick	Common Credential / Common Word
+midnight	Common Credential / Dictionary Word
+creative	Common Credential / Dictionary Word
+cocacola	Common Credential / Brand Name
+liverpool	Common Credential / City / Sports Team
+blink182	Common Credential / Band / Pop Culture
+danielle	Common Credential / Common First Name
+scorpion	Common Credential / Dictionary Word
+veronica	Common Credential / Common First Name
+nicholas	Common Credential / Common First Name
+asdfasdf	Common Credential / Repeated Pattern
+metallica	Common Credential / Band / Pop Culture
+december	Common Credential / Dictionary Word
+patricia	Common Credential / Common First Name
+christian	Common Credential / Common First Name
+spiderman	Common Credential / Pop Culture Word
+security	Common Credential / Dictionary Word
+slipknot	Common Credential / Band / Pop Culture
+november	Common Credential / Dictionary Word
+qwertyui	Common Credential / Keyboard Pattern
+butterfly	Common Credential / Dictionary Word
+swordfish	Common Credential / Dictionary Word
+carolina	Common Credential / Geographic Name
+hardcore	Common Credential / Dictionary Word
+corvette	Common Credential / Brand Name
+12341234	Common Credential / Repeated Pattern
+remember	Common Credential / Dictionary Word
+qwer1234	Common Credential / Simple Alphanumeric
+leonardo	Common Credential / Common First Name
+snickers	Common Credential / Brand Name
+williams	Common Credential / Common Surname
+angelina	Common Credential / Common First Name
+anderson	Common Credential / Common Surname
+pakistan	Common Credential / Geographic Name
+marlboro	Common Credential / Brand Name
+kimberly	Common Credential / Common First Name
+00000000	Common Credential / Repeated Pattern
+snowball	Common Credential / Dictionary Word
+sebastian	Common Credential / Common First Name
+godzilla	Common Credential / Pop Culture Word
+hello123	Common Credential / Simple Alphanumeric
+champion	Common Credential / Dictionary Word
+precious	Common Credential / Dictionary Word
+einstein	Common Credential / Historical Name
+napoleon	Common Credential / Historical Name
+mountain	Common Credential / Dictionary Word
+dolphins	Common Credential / Sports Team / Word
+charlotte	Common Credential / Common First Name
+fernando	Common Credential / Common First Name
+basketball	Common Credential / Common Word
+barcelona	Common Credential / City / Sports Team
+87654321	Common Credential / Reverse Sequential
+paradise	Common Credential / Dictionary Word
+motorola	Common Credential / Brand Name
+bullshit	Common Credential / Profanity Phrase
+brooklyn	Common Credential / Geographic Name
+stephanie	Common Credential / Common First Name
+elizabeth	Common Credential / Common First Name
+qwerty12	Common Credential / Keyboard Pattern
+franklin	Common Credential / Common Name
+american	Common Credential / Dictionary Word
+platinum	Common Credential / Dictionary Word
+icecream	Common Credential / Common Phrase
+darkness	Common Credential / Dictionary Word
+cristina	Common Credential / Common First Name
+colorado	Common Credential / Geographic Name
+alexandra	Common Credential / Common First Name
+steelers	Common Credential / Sports Team
+serenity	Common Credential / Dictionary Word
+mitchell	Common Credential / Common Name
+lollipop	Common Credential / Dictionary Word
+marshall	Common Credential / Common Name
+1qazxsw2	Common Credential / Keyboard Pattern
+12344321	Common Credential / Palindrome Pattern
+startrek	Common Credential / Pop Culture Word
+christine	Common Credential / Common First Name
+business	Common Credential / Dictionary Word
+nintendo	Common Credential / Brand Name
+asdfghjk	Common Credential / Keyboard Pattern
+zaq12wsx	Common Credential / Keyboard Pattern
+scotland	Common Credential / Geographic Name
+hercules	Common Credential / Pop Culture / Mythological Name
+explorer	Common Credential / Dictionary Word
+manchester	Common Credential / City / Sports Team
+firebird	Common Credential / Dictionary Word
+engineer	Common Credential / Dictionary Word
+virginia	Common Credential / Geographic Name
+simpsons	Common Credential / Pop Culture Word
+angelica	Common Credential / Common First Name
+september	Common Credential / Dictionary Word
+isabelle	Common Credential / Common First Name
+isabella	Common Credential / Common First Name
+changeme	Common Credential / Default Password
+passport	Common Credential / Dictionary Word
+infinity	Common Credential / Dictionary Word
+superstar	Common Credential / Dictionary Word
+courtney	Common Credential / Common First Name
+scarface	Common Credential / Pop Culture Word
+pavilion	Common Credential / Dictionary Word
+abcdefgh	Common Credential / Sequential Pattern
+a1b2c3d4	Common Credential / Keyboard / Sequential Pattern
+harrison	Common Credential / Common Name
+spitfire	Common Credential / Dictionary Word
+catherine	Common Credential / Common First Name
+birthday	Common Credential / Dictionary Word
+wolverine	Common Credential / Pop Culture Word
+guinness	Common Credential / Brand Name
+california	Common Credential / Geographic Name
+logitech	Common Credential / Brand Name
+emmanuel	Common Credential / Common First Name
+11223344	Common Credential / Repeated Pattern
+goldfish	Common Credential / Dictionary Word
+cheyenne	Common Credential / Common First Name
+testtest	Common Credential / Repeated Pattern
+stargate	Common Credential / Pop Culture Word
+microsoft	Common Credential / Brand Name
+anything	Common Credential / Dictionary Word
+welcome1	Common Credential / Simple Variation
+eternity	Common Credential / Dictionary Word
+westside	Common Credential / Dictionary Word
+password123	Common Credential / Simple Variation
+maryjane	Common Credential / Common Name
+lawrence	Common Credential / Common Name
+kristina	Common Credential / Common First Name
+kawasaki	Common Credential / Brand Name
+drowssap	Common Credential / Reversed Password
+blahblah	Common Credential / Repeated Pattern
+babygirl	Common Credential / Common Phrase
+poohbear	Common Credential / Pop Culture Word
+florence	Common Credential / Common First Name
+sapphire	Common Credential / Dictionary Word
+hamilton	Common Credential / Common Name
+greenday	Common Credential / Band / Pop Culture
+qazwsxedc	Common Credential / Keyboard Pattern
+twilight	Common Credential / Pop Culture / Dictionary Word
+swimming	Common Credential / Dictionary Word
+stardust	Common Credential / Dictionary Word
+predator	Common Credential / Dictionary Word
+penelope	Common Credential / Common First Name
+michigan	Common Credential / Geographic Name
+margaret	Common Credential / Common First Name
+brittany	Common Credential / Common First Name
+shithead	Common Credential / Profanity Phrase
+redskins	Common Credential / Sports Team
+pussycat	Common Credential / Common Word
+fireball	Common Credential / Dictionary Word
+cherokee	Common Credential / Dictionary Word
+australia	Common Credential / Geographic Name
+1234abcd	Common Credential / Simple Alphanumeric
+lovelove	Common Credential / Repeated Pattern
+thailand	Common Credential / Geographic Name
+lasvegas	Common Credential / Geographic Name
+butthead	Common Credential / Pop Culture / Word
+blizzard	Common Credential / Dictionary Word
+shamrock	Common Credential / Dictionary Word
+bluebird	Common Credential / Dictionary Word
+atlantis	Common Credential / Geographic / Mythological Name
+147258369	Common Credential / Keypad Pattern
+valentine	Common Credential / Dictionary Word
+magnolia	Common Credential / Dictionary Word
+juventus	Common Credential / Sports Team
+diamonds	Common Credential / Dictionary Word
+christopher	Common Credential / Common First Name
+warcraft	Common Credential / Pop Culture Word
+renegade	Common Credential / Dictionary Word
+mohammed	Common Credential / Common First Name
+terminator	Common Credential / Pop Culture Word
+shopping	Common Credential / Dictionary Word
+savannah	Common Credential / Common First Name
+giovanni	Common Credential / Common First Name
+12121212	Common Credential / Repeated Pattern
+wildcats	Common Credential / Sports Team / Word
+portugal	Common Credential / Geographic Name
+beautiful	Common Credential / Dictionary Word
+sunflower	Common Credential / Dictionary Word
+santiago	Common Credential / Common First Name
+kathleen	Common Credential / Common First Name
+enterprise	Common Credential / Pop Culture / Word
+clifford	Common Credential / Common First Name
+christina	Common Credential / Common First Name
+55555555	Common Credential / Repeated Pattern
+something	Common Credential / Dictionary Word
+rosemary	Common Credential / Common First Name
+vacation	Common Credential / Dictionary Word
+hollywood	Common Credential / Geographic Name
+chandler	Common Credential / Common First Name
+99999999	Common Credential / Repeated Pattern
+lorraine	Common Credential / Common First Name
+children	Common Credential / Dictionary Word
+beatrice	Common Credential / Common First Name
+airborne	Common Credential / Dictionary Word
+valentin	Common Credential / Common First Name
+moonlight	Common Credential / Dictionary Word
+kamikaze	Common Credential / Dictionary Word
+strawberry	Common Credential / Dictionary Word
+software	Common Credential / Dictionary Word
+22222222	Common Credential / Repeated Pattern
+skywalker	Common Credential / Pop Culture Word
+salvador	Common Credential / Common First Name
+panthers	Common Credential / Sports Team / Word
+lacrosse	Common Credential / Common Word
+charlie1	Common Credential / Simple Variation
+cardinal	Common Credential / Dictionary Word
+bluemoon	Common Credential / Common Phrase
+0123456789	Common Credential / Sequential Pattern
+zeppelin	Common Credential / Band / Pop Culture
+rockstar	Common Credential / Dictionary Word
+operator	Common Credential / Dictionary Word
+dragonfly	Common Credential / Dictionary Word
+dickhead	Common Credential / Profanity Phrase
+anaconda	Common Credential / Dictionary Word
+amsterdam	Common Credential / Geographic Name
+77777777	Common Credential / Repeated Pattern
+skittles	Common Credential / Brand Name
+personal	Common Credential / Dictionary Word
+kingkong	Common Credential / Pop Culture Word
+geronimo	Common Credential / Historical / Dictionary Word
+christmas	Common Credential / Dictionary Word
+wrestling	Common Credential / Dictionary Word
+robinson	Common Credential / Common Surname
+lightning	Common Credential / Dictionary Word
+kingston	Common Credential / Geographic / Name
+hannibal	Common Credential / Historical Name
+download	Common Credential / Dictionary Word
+darkstar	Common Credential / Dictionary Word
+undertaker	Common Credential / Pop Culture / Word
+tinkerbell	Common Credential / Pop Culture Word
+sweetpea	Common Credential / Common Phrase
+softball	Common Credential / Common Word
+panasonic	Common Credential / Brand Name
+keyboard	Common Credential / Dictionary Word
+darkside	Common Credential / Common Phrase
+cleopatra	Common Credential / Historical Name
+assassin	Common Credential / Dictionary Word
+vladimir	Common Credential / Common First Name
+national	Common Credential / Dictionary Word
+matthew1	Common Credential / Simple Variation
+godfather	Common Credential / Pop Culture Word
+brothers	Common Credential / Dictionary Word
+warriors	Common Credential / Sports Team / Word
+universe	Common Credential / Dictionary Word
+rush2112	Common Credential / Band / Pop Culture
+mushroom	Common Credential / Dictionary Word
+bigdaddy	Common Credential / Common Phrase
+1a2b3c4d	Common Credential / Keyboard / Sequential Pattern
+ultimate	Common Credential / Dictionary Word
+peterpan	Common Credential / Pop Culture Word
+loverboy	Common Credential / Common Phrase
+truelove	Common Credential / Common Phrase
+trombone	Common Credential / Dictionary Word
+madeline	Common Credential / Common First Name
+gangster	Common Credential / Dictionary Word
+dingdong	Common Credential / Common Phrase
+catalina	Common Credential / Geographic Name
+alejandro	Common Credential / Common First Name
+kittycat	Common Credential / Common Phrase
+aquarius	Common Credential / Zodiac Word
+1111111111	Common Credential / Repeated Pattern
+patriots	Common Credential / Sports Team / Word
+jamesbond	Common Credential / Pop Culture Word
+ihateyou	Common Credential / Common Phrase
+blessing	Common Credential / Dictionary Word
+airplane	Common Credential / Dictionary Word
+stingray	Common Credential / Dictionary Word
+hellfire	Common Credential / Dictionary Word
+guardian	Common Credential / Dictionary Word
+flamingo	Common Credential / Dictionary Word
+0987654321	Common Credential / Reverse Sequential
+socrates	Common Credential / Historical Name
+richmond	Common Credential / Geographic Name
+electric	Common Credential / Dictionary Word
+thankyou	Common Credential / Common Phrase
+sterling	Common Credential / Common Name
+munchkin	Common Credential / Dictionary Word
+morpheus	Common Credential / Pop Culture Word
+imperial	Common Credential / Dictionary Word
+happiness	Common Credential / Dictionary Word
+goodluck	Common Credential / Common Phrase
+columbia	Common Credential / Geographic Name
+campbell	Common Credential / Common Surname
+blackjack	Common Credential / Dictionary Word
+999999999	Common Credential / Repeated Pattern
+telephone	Common Credential / Dictionary Word
+oblivion	Common Credential / Dictionary Word
+newcastle	Common Credential / City / Sports Team
+freedom1	Common Credential / Simple Variation
+washington	Common Credential / Geographic Name
+valentina	Common Credential / Common First Name
+valencia	Common Credential / City / Common Name
+spectrum	Common Credential / Dictionary Word
+jessica1	Common Credential / Simple Variation
+jeremiah	Common Credential / Common First Name
+handsome	Common Credential / Dictionary Word
+goldberg	Common Credential / Pop Culture / Name
+gabriela	Common Credential / Common First Name
+anthony1	Common Credential / Simple Variation
+a1234567	Common Credential / Simple Alphanumeric
+xxxxxxxx	Common Credential / Repeated Pattern
+peekaboo	Common Credential / Dictionary Word
+motherfucker	Common Credential / Profanity Phrase
+montreal	Common Credential / Geographic Name
+katherine	Common Credential / Common First Name
+kangaroo	Common Credential / Dictionary Word
+immortal	Common Credential / Dictionary Word
+chocolat	Common Credential / Dictionary Word
+thompson	Common Credential / Common Surname
+research	Common Credential / Dictionary Word
+oklahoma	Common Credential / Geographic Name
+mariposa	Common Credential / Spanish Dictionary Word
+idontknow	Common Credential / Common Phrase
+defender	Common Credential / Dictionary Word
+applepie	Common Credential / Common Phrase
+squirrel	Common Credential / Dictionary Word
+pineapple	Common Credential / Dictionary Word
+hongkong	Common Credential / Geographic Name
+dinosaur	Common Credential / Dictionary Word
