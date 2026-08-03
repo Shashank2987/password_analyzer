@@ -96,7 +96,7 @@ def main():
         return
 
     print("\n" + "=" * 55)
-    print("        PURE MACHINE LEARNING PASSWORD ANALYZER")
+    print("         PASSWORD ANALYZER")
     print("=" * 55)
 
     while True:
