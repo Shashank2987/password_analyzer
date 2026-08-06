@@ -1,9 +1,9 @@
 import pandas as pd
 import joblib
 
-from sklearn.model_selection import train_test_split
-from sklearn.pipeline import Pipeline
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.model_selection import train_test_split #Splits the data( training & testing in 80/20)
+from sklearn.pipeline import Pipeline #makes it easy to convert text to TF - IDF, then train, test and predict 
+from sklearn.feature_extraction.text import TfidfVectorizer #
 from sklearn.preprocessing import LabelEncoder
 from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score, classification_report
