@@ -1,12 +1,12 @@
 import pandas as pd
 import joblib
 
-from sklearn.model_selection import train_test_split #Splits the data( training & testing in 80/20)
-from sklearn.pipeline import Pipeline #makes it easy to convert text to TF - IDF, then train, test and predict 
-from sklearn.feature_extraction.text import TfidfVectorizer #convert text to numerical vectors
-from sklearn.preprocessing import LabelEncoder#categorize strong weak to 1 0
-from sklearn.svm import LinearSVC # ML algo to identify and classify text inputs based on numerical vectors
-from sklearn.metrics import accuracy_score, classification_report #evaluate recall, f1 score and precision 
+from sklearn.model_selection import train_test_split 
+from sklearn.pipeline import Pipeline  
+from sklearn.feature_extraction.text import TfidfVectorizer 
+from sklearn.preprocessing import LabelEncoder
+from sklearn.svm import LinearSVC
+from sklearn.metrics import accuracy_score, classification_report 
 
 # Load dataset
 df = pd.read_csv("trainer_dataset.csv")
@@ -15,7 +15,7 @@ df = pd.read_csv("trainer_dataset.csv")
 df.columns = df.columns.str.strip()
 df.dropna(inplace=True)
 df.drop_duplicates(inplace=True)
-
+print("Data Cleaned and Organized")
 # Features and Labels
 X = df["password"].astype(str)
 y = df["Strength"].astype(str)
@@ -23,7 +23,7 @@ y = df["Strength"].astype(str)
 # Encode labels
 encoder = LabelEncoder()
 y_encoded = encoder.fit_transform(y)
-
+print("Strength Factor Encoded")
 # Split
 X_train, X_test, y_train, y_test = train_test_split(
     X,
@@ -41,7 +41,7 @@ model = Pipeline([
     )),
     ("classifier", LinearSVC(class_weight="balanced"))
 ])
-
+print("Model Pipeline")
 # Train
 model.fit(X_train, y_train)
 
