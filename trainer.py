@@ -3,10 +3,10 @@ import joblib
 
 from sklearn.model_selection import train_test_split #Splits the data( training & testing in 80/20)
 from sklearn.pipeline import Pipeline #makes it easy to convert text to TF - IDF, then train, test and predict 
-from sklearn.feature_extraction.text import TfidfVectorizer #
-from sklearn.preprocessing import LabelEncoder
-from sklearn.svm import LinearSVC
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.feature_extraction.text import TfidfVectorizer #convert text to numerical vectors
+from sklearn.preprocessing import LabelEncoder#categorize strong weak to 1 0
+from sklearn.svm import LinearSVC # ML algo to identify and classify text inputs based on numerical vectors
+from sklearn.metrics import accuracy_score, classification_report #evaluate recall, f1 score and precision 
 
 # Load dataset
 df = pd.read_csv("trainer_dataset.csv")
