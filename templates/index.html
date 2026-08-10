@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cylinder — Password Security Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body data-using-ml="{{ 'true' if using_ml_model else 'false' }}">
+
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <main class="console">
+
+    <header class="console__header">
+      <div class="brand">
+        <svg class="brand__mark" width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M6 10V7a6 6 0 0 1 12 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+        <span class="brand__name">CYLINDER</span>
+      </div>
+      <div class="model-badge" id="modelBadge">
+        <span class="model-badge__dot"></span>
+        <span id="modelBadgeText">checking model…</span>
+      </div>
+    </header>
+
+    <section class="panel panel--input">
+      <label class="prompt" for="pwInput">
+        <span class="prompt__glyph">&gt;</span>
+        <input
+          type="text"
+          id="pwInput"
+          class="prompt__field"
+          placeholder="type a password to analyze"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+        <button type="button" id="toggleVisibility" class="prompt__toggle" aria-label="Toggle password visibility">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" id="eyeIcon">
+            <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+        </button>
+      </label>
+      <p class="prompt__hint">Nothing typed here leaves this analysis — no password is stored.</p>
+    </section>
+
+    <section class="panel panel--main" id="resultsPanel">
+
+      <div class="idle-state" id="idleState">
+        <div class="tumbler-idle">
+          <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+            <path d="M40 62V44a30 30 0 0 1 60 0v18" stroke="var(--text-dim)" stroke-width="4" stroke-linecap="round"/>
+            <rect x="26" y="62" width="88" height="58" rx="10" stroke="var(--text-dim)" stroke-width="4"/>
+            <circle cx="70" cy="90" r="6" fill="var(--text-dim)"/>
+          </svg>
+        </div>
+        <p>Awaiting input</p>
+      </div>
+
+      <div class="results" id="resultsState" hidden>
+
+        <div class="results__top">
+
+          <div class="tumbler-card">
+            <svg viewBox="0 0 220 200" class="tumbler" id="tumblerSvg">
+              <!-- Lock body -->
+              <path d="M60 88V64a50 50 0 0 1 100 0v24" stroke="var(--text-dim)" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <rect x="38" y="88" width="144" height="96" rx="14" fill="var(--panel-raised)" stroke="var(--text-dim)" stroke-width="3"/>
+              <!-- 5 tumbler pins, animated via JS by toggling .pin--set -->
+              <g id="pins">
+                <rect class="pin" data-pin="length" x="58"  y="150" width="14" height="26" rx="4"/>
+                <rect class="pin" data-pin="upper"  x="83"  y="150" width="14" height="26" rx="4"/>
+                <rect class="pin" data-pin="lower"  x="108" y="150" width="14" height="26" rx="4"/>
+                <rect class="pin" data-pin="digit"  x="133" y="150" width="14" height="26" rx="4"/>
+                <rect class="pin" data-pin="special" x="158" y="150" width="14" height="26" rx="4"/>
+              </g>
+              <rect x="38" y="88" width="144" height="96" rx="14" fill="none" stroke="var(--panel-line)" stroke-width="1"/>
+            </svg>
+            <div class="tumbler-caption" id="tumblerCaption">0 / 5 conditions met</div>
+          </div>
+
+          <div class="verdict">
+            <div class="verdict__label">Assessed strength</div>
+            <div class="verdict__value" id="strengthValue">—</div>
+            <div class="meter">
+              <div class="meter__fill" id="meterFill"></div>
+            </div>
+            <div class="verdict__meta" id="strengthSource"></div>
+          </div>
+
+        </div>
+
+        <div class="readouts">
+          <div class="readout">
+            <div class="readout__label">Entropy</div>
+            <div class="readout__value" id="entropyValue">0.00 <span class="unit">bits</span></div>
+          </div>
+          <div class="readout">
+            <div class="readout__label">Est. crack time</div>
+            <div class="readout__value readout__value--time" id="crackValue">—</div>
+          </div>
+        </div>
+
+        <div class="breakdown">
+          <div class="breakdown__row">
+            <span class="breakdown__key">Length</span>
+            <span class="breakdown__val" id="valLength">0</span>
+          </div>
+          <div class="breakdown__row">
+            <span class="breakdown__key">Uppercase</span>
+            <span class="breakdown__val" id="valUpper">0</span>
+          </div>
+          <div class="breakdown__row">
+            <span class="breakdown__key">Lowercase</span>
+            <span class="breakdown__val" id="valLower">0</span>
+          </div>
+          <div class="breakdown__row">
+            <span class="breakdown__key">Digits</span>
+            <span class="breakdown__val" id="valDigits">0</span>
+          </div>
+          <div class="breakdown__row">
+            <span class="breakdown__key">Special chars</span>
+            <span class="breakdown__val" id="valSpecial">0</span>
+          </div>
+        </div>
+
+        <div class="suggestions" id="suggestionsBlock">
+          <div class="suggestions__label">Recommendations</div>
+          <ul class="suggestions__list" id="suggestionsList"></ul>
+        </div>
+
+      </div>
+
+      <div class="error-state" id="errorState" hidden></div>
+
+    </section>
+
+    <footer class="console__footer">
+      <span>Brute-force assumption: 1,000,000,000 guesses/sec</span>
+    </footer>
+
+  </main>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
