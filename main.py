@@ -1,172 +1,299 @@
+
 import math
-import random
 import string
 import joblib
-import numpy as np
-import pymysql
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report
-from sklearn.model_selection import train_test_split
-import xgboost as xgb
-# ---------------------------------------------------------
-# 1. Database Connection & Fetching Data
-# ---------------------------------------------------------
-DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "root",
-    "database": "cypbl",
-}
 
 
-def fetch_weak_passwords():
-    """Fetch all known weak passwords from your MySQL database."""
-    connection = pymysql.connect(**DB_CONFIG)
-    cursor = connection.cursor()
-    cursor.execute("SELECT password FROM data")
-    rows = cursor.fetchall()
-    cursor.close()
-    connection.close()
+# ============================================================
+# LOAD TRAINED ML MODEL
+# ============================================================
 
-    # Clean list of weak passwords
-    return [row[0] for row in rows if row[0]]
+try:
+    model = joblib.load("password_strength_model.pkl")
+    encoder = joblib.load("label_encoder.pkl")
 
+    print("✅ ML model loaded successfully.")
 
-# ---------------------------------------------------------
-# 2. Synthetic Dataset Generation
-# ---------------------------------------------------------
-def generate_strong_passwords(count=500):
-    """Generate high-entropy synthetic strong passwords to balance training data."""
-    strong_list = []
-    chars = string.ascii_letters + string.digits + "!@#$%^&*()_+-="
-
-    for _ in range(count):
-        # Generate random length between 14 and 24
-        length = random.randint(14, 24)
-        pwd = "".join(random.choice(chars) for _ in range(length))
-        strong_list.append(pwd)
-
-    return strong_list
+except FileNotFoundError:
+    print("❌ Model files not found.")
+    print("Make sure these files are in the same folder:")
+    print("  password_strength_model.pkl")
+    print("  label_encoder.pkl")
+    exit()
 
 
-# ---------------------------------------------------------
-# 3. Feature Extraction Engineering
-# ---------------------------------------------------------
-def calculate_entropy(s):
-    """Calculates Shannon entropy of a string (randomness measure)."""
-    if not s:
+# ============================================================
+# ENTROPY CALCULATION
+# ============================================================
+
+def calculate_entropy(password):
+    """
+    Estimates password entropy based on the possible
+    character set used by the password.
+    """
+
+    if not password:
         return 0
-    prob = [float(s.count(c)) / len(s) for c in dict.fromkeys(list(s))]
-    return -sum([p * math.log(p, 2) for p in prob])
+
+    charset_size = 0
+
+    if any(c.islower() for c in password):
+        charset_size += 26
+
+    if any(c.isupper() for c in password):
+        charset_size += 26
+
+    if any(c.isdigit() for c in password):
+        charset_size += 10
+
+    if any(c in string.punctuation for c in password):
+        charset_size += len(string.punctuation)
+
+    if charset_size == 0:
+        return 0
+
+    entropy = len(password) * math.log2(charset_size)
+
+    return entropy
 
 
-def extract_features(password):
-    """Converts a password string into a numeric feature vector."""
-    length = len(password)
-    uppercase_cnt = sum(1 for c in password if c.isupper())
-    lowercase_cnt = sum(1 for c in password if c.islower())
-    digits_cnt = sum(1 for c in password if c.isdigit())
-    special_cnt = sum(
-        1 for c in password if not c.isalnum()
-    )  # Symbols / Spaces
-    entropy = calculate_entropy(password)
+# ============================================================
+# CRACK TIME ESTIMATION
+# ============================================================
 
-    # Feature vector array
-    return [
-        length,
-        uppercase_cnt,
-        lowercase_cnt,
-        digits_cnt,
-        special_cnt,
-        entropy,
+def estimate_crack_time(entropy, guesses_per_second=1_000_000_000):
+    """
+    Estimates average brute-force crack time.
+
+    guesses_per_second:
+        Assumed attacker guessing rate.
+
+    Default:
+        1 billion guesses/second.
+
+    Average guesses required ≈ 2^(entropy - 1)
+    """
+
+    if entropy <= 0:
+        return "Instant"
+
+    possible_passwords = 2 ** entropy
+
+    average_guesses = possible_passwords / 2
+
+    seconds = average_guesses / guesses_per_second
+
+    return format_time(seconds)
+
+
+# ============================================================
+# FORMAT TIME
+# ============================================================
+
+def format_time(seconds):
+
+    if seconds < 1:
+        return "Less than 1 second"
+
+    if seconds < 60:
+        return f"{seconds:.2f} seconds"
+
+    minutes = seconds / 60
+
+    if minutes < 60:
+        return f"{minutes:.2f} minutes"
+
+    hours = minutes / 60
+
+    if hours < 24:
+        return f"{hours:.2f} hours"
+
+    days = hours / 24
+
+    if days < 365:
+        return f"{days:.2f} days"
+
+    years = days / 365
+
+    if years < 1_000:
+        return f"{years:.2f} years"
+
+    if years < 1_000_000:
+        return f"{years / 1_000:.2f} thousand years"
+
+    if years < 1_000_000_000:
+        return f"{years / 1_000_000:.2f} million years"
+
+    if years < 1_000_000_000_000:
+        return f"{years / 1_000_000_000:.2f} billion years"
+
+    return f"{years / 1_000_000_000_000:.2f} trillion years"
+
+
+# ============================================================
+# PASSWORD CHARACTER ANALYSIS
+# ============================================================
+
+def analyze_characters(password):
+
+    return {
+        "Length": len(password),
+        "Uppercase": sum(c.isupper() for c in password),
+        "Lowercase": sum(c.islower() for c in password),
+        "Digits": sum(c.isdigit() for c in password),
+        "Special Characters": sum(c in string.punctuation for c in password)
+    }
+
+
+# ============================================================
+# SUGGESTIONS
+# ============================================================
+
+def generate_suggestions(password):
+
+    suggestions = []
+
+    if len(password) < 12:
+        suggestions.append(
+            "Increase the password length to at least 12 characters."
+        )
+
+    if not any(c.isupper() for c in password):
+        suggestions.append(
+            "Add uppercase letters."
+        )
+
+    if not any(c.islower() for c in password):
+        suggestions.append(
+            "Add lowercase letters."
+        )
+
+    if not any(c.isdigit() for c in password):
+        suggestions.append(
+            "Add numbers."
+        )
+
+    if not any(c in string.punctuation for c in password):
+        suggestions.append(
+            "Add special characters such as !, @, #, or $."
+        )
+
+    common_passwords = [
+        "password",
+        "123456",
+        "12345678",
+        "qwerty",
+        "admin",
+        "letmein",
+        "welcome"
     ]
 
-
-# ---------------------------------------------------------
-# 4. Model Training Pipeline
-# ---------------------------------------------------------
-def train_model():
-    print("Fetching weak passwords from MySQL database...")
-    weak_passwords = fetch_weak_passwords()
-    print(f"Loaded {len(weak_passwords)} weak passwords from DB.")
-
-    # Generate an equal number of strong passwords to ensure class balance
-    print("Generating synthetic strong passwords for training...")
-    strong_passwords = generate_strong_passwords(count=len(weak_passwords))
-
-    # Build dataset (X = Features, y = Target Labels)
-    # Label 0 = Weak / Vulnerable, Label 1 = Strong
-    X = []
-    y = []
-
-    for pwd in weak_passwords:
-        X.append(extract_features(pwd))
-        y.append(0)
-
-    for pwd in strong_passwords:
-        X.append(extract_features(pwd))
-        y.append(1)
-
-    X = np.array(X)
-    y = np.array(y)
-
-    # Split dataset: 80% Training, 20% Testing
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42, stratify=y
-    )
-
-    print("\nTraining Random Forest Classifier model...")
-    model = RandomForestClassifier(n_estimators=100, random_state=42)
-    model.fit(X_train, y_train)
-
-    # Evaluate Model
-    y_pred = model.predict(X_test)
-    print("\n--- Model Performance Evaluation ---")
-    print(
-        classification_report(
-            y_test, y_pred, target_names=["Weak (0)", "Strong (1)"]
+    if password.lower() in common_passwords:
+        suggestions.append(
+            "Avoid commonly used passwords."
         )
-    )
 
-    # Save model to disk
-    joblib.dump(model, "password_ml_model.pkl")
-    print("Saved trained model to 'password_ml_model.pkl'.")
-
-    return model
+    return suggestions
 
 
-# ---------------------------------------------------------
-# 5. Inference / Prediction Routine
-# ---------------------------------------------------------
-def predict_password_strength(model, password):
-    features = np.array([extract_features(password)])
+# ============================================================
+# MAIN PROGRAM
+# ============================================================
 
-    # Predict class (0 or 1) and confidence probability
-    prediction = model.predict(features)[0]
-    probabilities = model.predict_proba(features)[0]
+def main():
 
-    confidence = (
-        probabilities[1] if prediction == 1 else probabilities[0]
-    ) * 100
+    print("\n" + "=" * 60)
+    print("             AI PASSWORD SECURITY ANALYZER")
+    print("=" * 60)
 
-    rating = "STRONG" if prediction == 1 else "WEAK / VULNERABLE"
+    print("\nCrack-time assumption:")
+    print("1 billion guesses per second")
+    print("(This is a theoretical brute-force estimate.)")
 
-    print("\n" + "=" * 45)
-    print(f"ML PREDICTION FOR: '{password}'")
-    print("=" * 45)
-    print(f"Classification : {rating}")
-    print(f"ML Confidence  : {confidence:.2f}%")
-    print("=" * 45)
+    while True:
+
+        password = input(
+            "\nEnter password to analyze (or type 'exit'): "
+        )
+
+        if password.lower() == "exit":
+            print("\nExiting...")
+            break
+
+        if not password:
+            print("❌ Please enter a password.")
+            continue
+
+        # ----------------------------------------------------
+        # 1. ML PREDICTION
+        # ----------------------------------------------------
+
+        prediction = model.predict([password])[0]
+
+        strength = encoder.inverse_transform([prediction])[0]
+
+        # ----------------------------------------------------
+        # 2. ENTROPY
+        # ----------------------------------------------------
+
+        entropy = calculate_entropy(password)
+
+        # ----------------------------------------------------
+        # 3. CRACK TIME
+        # ----------------------------------------------------
+
+        crack_time = estimate_crack_time(entropy)
+
+        # ----------------------------------------------------
+        # 4. CHARACTER ANALYSIS
+        # ----------------------------------------------------
+
+        analysis = analyze_characters(password)
+
+        # ----------------------------------------------------
+        # 5. SUGGESTIONS
+        # ----------------------------------------------------
+
+        suggestions = generate_suggestions(password)
+
+        # ----------------------------------------------------
+        # DISPLAY RESULT
+        # ----------------------------------------------------
+
+        print("\n" + "=" * 60)
+        print("                PASSWORD ANALYSIS")
+        print("=" * 60)
+
+        print(f"\nPassword        : {password}")
+        print(f"ML Strength     : {strength}")
+        print(f"Entropy         : {entropy:.2f} bits")
+        print(f"Estimated Crack : {crack_time}")
+
+        print("\nCharacter Analysis")
+        print("-" * 30)
+
+        for name, value in analysis.items():
+            print(f"{name:<22}: {value}")
+
+        if suggestions:
+
+            print("\nRecommendations")
+            print("-" * 30)
+
+            for suggestion in suggestions:
+                print(f"• {suggestion}")
+
+        else:
+
+            print("\n✅ No basic improvements detected.")
+
+        print("\n" + "=" * 60)
 
 
-# ---------------------------------------------------------
-# Main Execution Flow
-# ---------------------------------------------------------
+# ============================================================
+# RUN PROGRAM
+# ============================================================
+
 if __name__ == "__main__":
-    trained_model = train_model()
+    main()
 
-    # Test with sample passwords
-    test_inputs = ["password123", "P4ssw0rd!", "xK9#mQ2$vL8@zP1!"]
-
-    for pwd in test_inputs:
-        predict_password_strength(trained_model, pwd)
