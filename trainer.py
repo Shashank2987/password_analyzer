@@ -4,8 +4,8 @@ import joblib
 from sklearn.model_selection import train_test_split 
 from sklearn.pipeline import Pipeline  
 from sklearn.feature_extraction.text import TfidfVectorizer 
-from sklearn.preprocessing import LabelEncoder
-from sklearn.svm import LinearSVC
+from sklearn.preprocessing import LabelEncoder #Strong =1, weak =0
+from sklearn.svm import LinearSVC #ML model hai 
 from sklearn.metrics import accuracy_score, classification_report 
 
 # Load dataset

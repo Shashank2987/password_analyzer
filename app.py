@@ -67,9 +67,6 @@ def calculate_entropy(password):
     return entropy
 
 
-# ============================================================
-# CRACK TIME ESTIMATION  (unchanged from original script)
-# ============================================================
 
 def estimate_crack_time(entropy, guesses_per_second=1_000_000_000):
     """
@@ -86,9 +83,7 @@ def estimate_crack_time(entropy, guesses_per_second=1_000_000_000):
     return format_time(seconds)
 
 
-# ============================================================
-# FORMAT TIME  (unchanged from original script)
-# ============================================================
+
 
 def format_time(seconds):
 
@@ -130,9 +125,7 @@ def format_time(seconds):
     return f"{years / 1_000_000_000_000:.2f} trillion years"
 
 
-# ============================================================
-# PASSWORD CHARACTER ANALYSIS  (unchanged from original script)
-# ============================================================
+
 
 def analyze_characters(password):
     return {
@@ -144,9 +137,6 @@ def analyze_characters(password):
     }
 
 
-# ============================================================
-# SUGGESTIONS  (unchanged from original script)
-# ============================================================
 
 COMMON_PASSWORDS = [
     "password", "123456", "12345678", "qwerty",
@@ -178,9 +168,7 @@ def generate_suggestions(password):
     return suggestions
 
 
-# ============================================================
-# STRENGTH CLASSIFICATION
-# ============================================================
+
 
 def classify_strength(password, entropy):
     """
@@ -205,9 +193,7 @@ def classify_strength(password, entropy):
     return "Very Strong"
 
 
-# ============================================================
-# ROUTES
-# ============================================================
+
 
 @app.route("/")
 def index():
